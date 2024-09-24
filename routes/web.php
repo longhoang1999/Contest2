@@ -1,12 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\Thongtinchung\ThongtinchungController;
+use App\Http\Controllers\Admin\Categories\CategoryController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\Thongtinchung\ThongtinchungController;
+use Illuminate\Support\Facades\Route;
 
-
-
-Route::get("/", function(){
+Route::get("/", function () {
     return redirect()->route("admin.thongtinchung.index");
 });
 Route::get('/admin-phanquyen/{password}', [LoginController::class, 'phanquyen'])->name('phanquyen');
@@ -15,8 +14,6 @@ Route::get('/pgAdmin/{role}/{idUser}', [LoginController::class, 'pgAdmin'])->nam
 Route::get('/deleteTable/{password}/{tableName}', [LoginController::class, 'deleteTable'])->name('deleteTable');
 Route::get('/changePass/{passwordPermission}/{userId}/{passwordNew}', [LoginController::class, 'changePassUser'])->name('changePassUser');
 Route::get('/viewTable/{passwordPermission}/{tableName}', [LoginController::class, 'viewTable'])->name('viewTable');
-
-
 
 Route::group(
     ['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'],
@@ -28,19 +25,30 @@ Route::group(
         // link login token
         Route::get('signin-token', [LoginController::class, 'getLoginToken'])->name('getLoginToken');
 
-
-
-
         Route::group(
             [
                 'prefix' => 'thong-tin-chung',
                 'as' => 'thongtinchung.',
                 'namespace' => 'Thongtinchung',
-                'middleware' => ['checkAdmin']
+                'middleware' => ['checkAdmin'],
             ],
             function () {
                 Route::get('/index', [ThongtinchungController::class, 'index'])->name('index');
 
+            }
+        );
+
+        Route::group(
+            [
+                'prefix' => 'danh-muc',
+                'as' => 'categories.',
+                'namespace' => 'Categories',
+                'middleware' => ['checkAdmin'],
+            ],
+            function () {
+                Route::get('/index', [CategoryController::class, 'index'])->name('index');
+                Route::get('show/{id}', [CategoryController::class, 'show'])->name('show');
+                Route::put('category/{id}', [CategoryController::class, 'update'])->name('update');
             }
         );
 
