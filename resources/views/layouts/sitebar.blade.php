@@ -100,120 +100,204 @@
                   <!--end:Menu link-->
                   </div>
 
+
+
                   <div
                   data-kt-menu-trigger="click"
                   class="menu-item menu-accordion cungcapsolieu">
                   <!--begin:Menu link-->
-                  <span class="menu-link ">
-                      <span class="menu-icon">
-                      <i class="ki-duotone ki-address-book fs-2">
-                          <span class="path1"></span>
-                          <span class="path2"></span>
-                          <span class="path3"></span>
-                      </i>
-                      </span>
-                      <span class="menu-title">Cung cấp số liệu</span>
-                      <span class="menu-arrow"></span>
-                  </span>
-                  <!--end:Menu link-->
-                  <!--begin:Menu sub-->
-                  <div class="menu-sub menu-sub-accordion">
-                      <!--begin:Menu item-->
-                      <div class="menu-item">
-                      <!--begin:Menu link-->
-                      <a
-                          class="menu-link tochucquantri"
-                          href=""
-                      >
-                          <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                          </span>
-                          <span class="menu-title">Tổ chức quản trị</span>
-                      </a>
-                      <!--end:Menu link-->
-                      </div>
-                      <!--end:Menu item-->
-                      <!--begin:Menu item-->
-                      <div class="menu-item">
-                      <!--begin:Menu link-->
-                      <a
-                          class="menu-link giangvien"
-                          href=""
-                      >
-                          <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                          </span>
-                          <span class="menu-title">Giảng viên</span>
-                      </a>
-                      <!--end:Menu link-->
-                      </div>
-                      <!--end:Menu item-->
-                      <!--begin:Menu item-->
-                      <div class="menu-item">
-                      <!--begin:Menu link-->
-                      <a
-                          class="menu-link cosovatchat"
-                          href=""
-                      >
-                          <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                          </span>
-                          <span class="menu-title">Cơ sở vật chất</span>
-                      </a>
-                      <!--end:Menu link-->
-                      </div>
-                      <!--end:Menu item-->
-                      <!--begin:Menu item-->
-                      <div class="menu-item">
-                      <!--begin:Menu link-->
-                      <a
-                          class="menu-link taichinh"
-                          href=""
-                      >
-                          <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                          </span>
-                          <span class="menu-title">Tài chính</span>
-                      </a>
-                      <!--end:Menu link-->
-                      </div>
-                      <!--end:Menu item-->
-                      <!--begin:Menu item-->
-                      <div class="menu-item">
-                      <!--begin:Menu link-->
-                      <a
-                          class="menu-link tuyensinhdaotao"
-                          href=""
-                      >
-                          <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                          </span>
-                          <span class="menu-title"
-                          >Tuyển sinh và đào tạo</span
-                          >
-                      </a>
-                      <!--end:Menu link-->
-                      </div>
-                      <!--end:Menu item-->
-                      <!--begin:Menu item-->
-                      <div class="menu-item">
-                      <!--begin:Menu link-->
-                      <a
-                          class="menu-link doimoisangtao"
-                          href=""
-                      >
-                          <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                          </span>
-                          <span class="menu-title"
-                          >Nghiên cứu, đổi mới sáng tạo</span
-                          >
-                      </a>
-                      <!--end:Menu link-->
-                      </div>
-                      <!--end:Menu item-->
+                    <span class="menu-link ">
+                        <span class="menu-icon">
+                        <i class="ki-duotone ki-address-book fs-2">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                        </i>
+                        </span>
+                        <span class="menu-title">Quản lý sinh viên</span>
+                        <span class="menu-arrow"></span>
+                    </span>
+                    <!--end:Menu link-->
+                    <!--begin:Menu sub-->
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link tochucquantri"
+                            href="{{ route('admin.quanlysinhvien.index') }}"
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Danh sách sinh viên</span>
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link giangvien"
+                            href=""
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Xác minh đăng ký</span>
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link cosovatchat"
+                            href=""
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Tài khoản đã khóa</span>
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link taichinh"
+                            href=""
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Đăng ký tài khoản</span>
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                    <!--end:Menu sub-->
                   </div>
-                  <!--end:Menu sub-->
+
+                  <div
+                  data-kt-menu-trigger="click"
+                  class="menu-item menu-accordion cungcapsolieu">
+                  <!--begin:Menu link-->
+                    <span class="menu-link ">
+                        <span class="menu-icon">
+                        <i class="ki-duotone ki-address-book fs-2">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                        </i>
+                        </span>
+                        <span class="menu-title">Cung cấp số liệu</span>
+                        <span class="menu-arrow"></span>
+                    </span>
+                    <!--end:Menu link-->
+                    <!--begin:Menu sub-->
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link tochucquantri"
+                            href=""
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Tổ chức quản trị</span>
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link giangvien"
+                            href=""
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Giảng viên</span>
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link cosovatchat"
+                            href=""
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Cơ sở vật chất</span>
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link taichinh"
+                            href=""
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Tài chính</span>
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link tuyensinhdaotao"
+                            href=""
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title"
+                            >Tuyển sinh và đào tạo</span
+                            >
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                            class="menu-link doimoisangtao"
+                            href=""
+                        >
+                            <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title"
+                            >Nghiên cứu, đổi mới sáng tạo</span
+                            >
+                        </a>
+                        <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                    <!--end:Menu sub-->
                   </div>
               </div>
               <!--end::Menu-->

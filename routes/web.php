@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Thongtinchung\ThongtinchungController;
 use App\Http\Controllers\Admin\LoginController;
-
+use App\Http\Controllers\Admin\Quanlysinhvien\QuanlysinhvienController;
 
 
 Route::get("/", function(){
@@ -44,5 +44,21 @@ Route::group(
             }
         );
 
+
+        Route::group(
+            [
+                'prefix' => 'quan-ly-sinh-vien',
+                'as' => 'quanlysinhvien.',
+                'namespace' => 'Quanlysinhvien',
+                'middleware' => ['checkAdmin']
+            ],
+            function () {
+                Route::get('/index', [QuanlysinhvienController::class, 'index'])->name('index');
+                Route::get('/list-student', [QuanlysinhvienController::class, 'dataListStudent'])->name('dataListStudent');
+
+
+
+            }
+        );
     }
 );
