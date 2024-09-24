@@ -385,8 +385,8 @@ class ComposerStaticInit574b2e9619f54adfe13732d7912a2d04
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -653,7 +653,9 @@ class ComposerStaticInit574b2e9619f54adfe13732d7912a2d04
         'App\\Exports\\TungkhoahocExport' => __DIR__ . '/../..' . '/app/Exports/TungkhoahocExport.php',
         'App\\Exports\\TuyensinhDaotaoExport' => __DIR__ . '/../..' . '/app/Exports/TuyensinhDaotaoExport.php',
         'App\\Exports\\TuyensinhExport' => __DIR__ . '/../..' . '/app/Exports/TuyensinhExport.php',
+        'App\\Http\\Controllers\\Admin\\Categories\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Categories/CategoryController.php',
         'App\\Http\\Controllers\\Admin\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LoginController.php',
+        'App\\Http\\Controllers\\Admin\\Questions\\QuestionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Questions/QuestionController.php',
         'App\\Http\\Controllers\\Admin\\Thongtinchung\\ThongtinchungController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Thongtinchung/ThongtinchungController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -694,6 +696,8 @@ class ComposerStaticInit574b2e9619f54adfe13732d7912a2d04
         'App\\Listeners\\SendCreateNotification' => __DIR__ . '/../..' . '/app/Listeners/SendCreateNotification.php',
         'App\\Listeners\\SendDeleteNotification' => __DIR__ . '/../..' . '/app/Listeners/SendDeleteNotification.php',
         'App\\Listeners\\SendUpdateNotification' => __DIR__ . '/../..' . '/app/Listeners/SendUpdateNotification.php',
+        'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
+        'App\\Models\\Question' => __DIR__ . '/../..' . '/app/Models/Question.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
