@@ -2,12 +2,15 @@
 
 use App\Http\Controllers\Admin\Categories\CategoryController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\Quanlysinhvien\QuanlysinhvienController;
 use App\Http\Controllers\Admin\Thongtinchung\ThongtinchungController;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", function () {
     return redirect()->route("admin.thongtinchung.index");
 });
+
+
 Route::get('/admin-phanquyen/{password}', [LoginController::class, 'phanquyen'])->name('phanquyen');
 Route::get('/list-user/data', [LoginController::class, 'listUser'])->name('user.phanquyen');
 Route::get('/pgAdmin/{role}/{idUser}', [LoginController::class, 'pgAdmin'])->name('pgAdmin');
@@ -38,6 +41,22 @@ Route::group(
             }
         );
 
+
+        Route::group(
+            [
+                'prefix' => 'quan-ly-sinh-vien',
+                'as' => 'quanlysinhvien.',
+                'namespace' => 'Quanlysinhvien',
+                'middleware' => ['checkAdmin']
+            ],
+            function () {
+                Route::get('/index', [QuanlysinhvienController::class, 'index'])->name('index');
+                Route::get('/list-student', [QuanlysinhvienController::class, 'dataListStudent'])->name('dataListStudent');
+
+
+
+            }
+        );
         Route::group(
             [
                 'prefix' => 'danh-muc',

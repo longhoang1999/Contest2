@@ -7,6 +7,8 @@
             | Báo cáo BGD
         @show
     </title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.min.css">
+    <script src="https://cdn.datatables.net/2.1.7/js/dataTables.min.js"></script>
 		<meta class="csrf-token" name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

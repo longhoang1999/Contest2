@@ -1,5 +1,7 @@
 <?php return array(
     'root' => array(
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
@@ -7,6 +9,8 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+        'reference' => null,
+        'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
@@ -418,10 +422,11 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '77231d3ccbeae42fbdc831ca93114f9a20fb8858',
+            'reference' => '9b5d6b9404f2cb9f20a021ce2f2ac9eb74283dbd',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+            'reference' => null,
             'dev_requirement' => false,
         ),
         'laravel/pint' => array(
@@ -530,6 +535,15 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/mime-type-detection',
             'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'livewire/livewire' => array(
+            'pretty_version' => 'v3.5.4',
+            'version' => '3.5.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../livewire/livewire',
+            'aliases' => array(),
+            'reference' => 'b158c6386a892efc6c5e4682e682829baac1f933',
             'dev_requirement' => false,
         ),
         'maatwebsite/excel' => array(
@@ -653,6 +667,15 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../nunomaduro/termwind',
             'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'openspout/openspout' => array(
+            'pretty_version' => 'v4.24.5',
+            'version' => '4.24.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../openspout/openspout',
+            'aliases' => array(),
+            'reference' => '393299ae21153f042f48b185f2adeb4b157d1d93',
             'dev_requirement' => false,
         ),
         'phar-io/manifest' => array(
@@ -1400,10 +1423,10 @@
         'yajra/laravel-datatables' => array(
             'pretty_version' => 'v10.0.0',
             'version' => '10.0.0.0',
-            'reference' => '5a65f1b611a53a07530915619869ec87dcb823ad',
             'type' => 'library',
             'install_path' => __DIR__ . '/../yajra/laravel-datatables',
             'aliases' => array(),
+            'reference' => '5a65f1b611a53a07530915619869ec87dcb823ad',
             'dev_requirement' => false,
         ),
         'yajra/laravel-datatables-buttons' => array(
@@ -1422,6 +1445,15 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../yajra/laravel-datatables-editor',
             'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'yajra/laravel-datatables-export' => array(
+            'pretty_version' => 'v10.1.1',
+            'version' => '10.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../yajra/laravel-datatables-export',
+            'aliases' => array(),
+            'reference' => '18a1a22195af7b22b03ba07b47946b1e0aa176f2',
             'dev_requirement' => false,
         ),
         'yajra/laravel-datatables-fractal' => array(
