@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(7,0,117);
+background: linear-gradient(90deg, rgba(7,0,117,1) 0%, rgba(14,14,161,1) 35%, rgba(0,212,255,1) 100%);
+    transition: 1s;
+}
+.slide{
+    background: rgb(255,168,158);
+background: linear-gradient(90deg, rgba(255,168,158,1) 0%, rgba(244,54,72,1) 60%, rgba(153,36,47,1) 100%);
+}
+.container{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.125);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+.container .box h2{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.container .box button{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+.formBx{
+    position: absolute;
+    left: 50px;
+    width: 350px;
+    height: 480px;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    overflow: hidden;
+}
+.slide .formBx{
+    left: 400px;
+}
+
+.formBx .form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    background: #fff;
+}
+
+.formBx .form.signUpForm{
+    top: 100%;
+    transition-delay: 0s;
+}
+.slide .formBx .form.signUpForm{
+    top: 0;
+    transition-delay: 1s;
+}
+
+.formBx .form.signInForm{
+    top: 0;
+    transition-delay: 1s;
+    flex-direction: column;
+}
+.slide .formBx .form.signInForm{
+    top: -100%;
+    transition-delay: 0s;
+}
+.formBx .form form{
+    display: flex;
+    flex-direction: column;
+    padding:  0 50px;
+    width: 100%;
+}
+.formBx .form form h3{
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.formBx .form form input{
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    outline: none;
+    font-size: 0.8em;
+    border: 1px solid #333;
+    letter-spacing: 0.1em;
+}
+.formBx .form form input[type="button"]{
+    background: #03a9f4;
+    border: none;
+    color: #fff;
+    max-width: 103px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.formBx .form.signUpForm form input[type="button"]{
+    background: #f43648;
+}
+.forgot{
+    color: #333;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+
+}
+
+span.text-danger{
+    color: red;
+}
+
+.showMesTus{
+    color: #081d26;
+    font-size: 20px;
+    background: #ff6d6d;
+    width: 80%;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 2px;
+}
