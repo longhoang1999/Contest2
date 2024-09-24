@@ -29,6 +29,7 @@
 
         </div>
     </div>
+    
 @stop
 
 @section('footer_scripts')
