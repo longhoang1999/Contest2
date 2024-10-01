@@ -24,4 +24,9 @@ class Question extends Model
         'is_active',
         'is_demo',
     ];
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
 }
