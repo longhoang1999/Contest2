@@ -7,6 +7,8 @@
             | Báo cáo BGD
         @show
     </title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.min.css">
     <script src="https://cdn.datatables.net/2.1.7/js/dataTables.min.js"></script>
 		<meta class="csrf-token" name="csrf-token" content="{{ csrf_token() }}">
@@ -822,6 +824,8 @@
         body.classList.add("dark-sidebar");
       });
     </script>
+
+
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
     <script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
     <script src="{{ asset('assets/js/scripts.bundle.js') }}"></script>

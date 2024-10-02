@@ -50,8 +50,26 @@ Route::group(
                 'middleware' => ['checkAdmin']
             ],
             function () {
+                // Danh sách sinh viên
                 Route::get('/index', [QuanlysinhvienController::class, 'index'])->name('index');
                 Route::get('/list-student', [QuanlysinhvienController::class, 'dataListStudent'])->name('dataListStudent');
+                Route::get('/detail-student', [QuanlysinhvienController::class, 'detailStudent'])->name('detailStudent');
+                Route::post('/update-student', [QuanlysinhvienController::class, 'updateStudent'])->name('updateStudent');
+                Route::delete('/lock-student', [QuanlysinhvienController::class, 'lockStudent'])->name('lockStudent');
+
+                // Đăng ký tài khoản
+                Route::get('/register-user', [QuanlysinhvienController::class, 'registerUser'])->name('registerUser');
+                Route::post('/register-user', [QuanlysinhvienController::class, 'registerPostUser'])->name('registerPostUser');
+
+                // Tài khoản đã khóa
+                Route::get('/lock-user', [QuanlysinhvienController::class, 'lockUser'])->name('lockUser');
+                Route::get('/list-lock-student', [QuanlysinhvienController::class, 'listLockStudent'])->name('listLockStudent');
+                Route::post('/restore-usser', [QuanlysinhvienController::class, 'restoreStudent'])->name('restoreStudent');
+
+                // Xác minh đăng ký
+                Route::get('/confirm-register', [QuanlysinhvienController::class, 'confirmRegister'])->name('confirmRegister');
+                Route::get('/list-register-student', [QuanlysinhvienController::class, 'listRegisterStudent'])->name('listRegisterStudent');
+                Route::post('/confirm-student', [QuanlysinhvienController::class, 'confirmStudent'])->name('confirmStudent');
 
 
 
