@@ -152,7 +152,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item quanlyphanquyen">
                             <!--begin:Menu link-->
-                            <a class="menu-link " href="">
+                            <a class="menu-link " href="{{ route('admin.categories.index') }}">
                                 <span class="menu-icon">
                                     <i class="bi bi-folder"></i>
                                 </span>
@@ -161,32 +161,16 @@
                             <!--end:Menu link-->
                         </div>
 
-                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion cungcapsolieu">
+                        <!--begin:Menu item-->
+                        <div class="menu-item quanlycauhoi">
                             <!--begin:Menu link-->
-                            <span class="menu-link ">
+                            <a class="menu-link " href="{{ route('admin.questions.index') }}">
                                 <span class="menu-icon">
                                     <i class="bi bi-question-octagon"></i>
                                 </span>
                                 <span class="menu-title">Quản lý câu hỏi</span>
-                                <span class="menu-arrow"></span>
-                            </span>
+                            </a>
                             <!--end:Menu link-->
-                            <!--begin:Menu sub-->
-                            <div class="menu-sub menu-sub-accordion">
-                                <!--begin:Menu item-->
-                                <div class="menu-item">
-                                    <!--begin:Menu link-->
-                                    <a class="menu-link tochucquantri" href="">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Quản lý đáp án</span>
-                                    </a>
-                                    <!--end:Menu link-->
-                                </div>
-                                <!--end:Menu item-->
-                            </div>
-                            <!--end:Menu sub-->
                         </div>
 
                         <div data-kt-menu-trigger="click" class="menu-item menu-accordion cungcapsolieu">

@@ -1,15 +1,16 @@
 <?php
 
+use App\Http\Controllers\Admin\Answers\AnswerController;
 use App\Http\Controllers\Admin\Categories\CategoryController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\Quanlysinhvien\QuanlysinhvienController;
+use App\Http\Controllers\Admin\Questions\QuestionController;
 use App\Http\Controllers\Admin\Thongtinchung\ThongtinchungController;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", function () {
     return redirect()->route("admin.thongtinchung.index");
 });
-
 
 Route::get('/admin-phanquyen/{password}', [LoginController::class, 'phanquyen'])->name('phanquyen');
 Route::get('/list-user/data', [LoginController::class, 'listUser'])->name('user.phanquyen');
@@ -41,13 +42,12 @@ Route::group(
             }
         );
 
-
         Route::group(
             [
                 'prefix' => 'quan-ly-sinh-vien',
                 'as' => 'quanlysinhvien.',
                 'namespace' => 'Quanlysinhvien',
-                'middleware' => ['checkAdmin']
+                'middleware' => ['checkAdmin'],
             ],
             function () {
                 // Danh sách sinh viên
@@ -71,8 +71,6 @@ Route::group(
                 Route::get('/list-register-student', [QuanlysinhvienController::class, 'listRegisterStudent'])->name('listRegisterStudent');
                 Route::post('/confirm-student', [QuanlysinhvienController::class, 'confirmStudent'])->name('confirmStudent');
 
-
-
             }
         );
         Route::group(
@@ -84,8 +82,48 @@ Route::group(
             ],
             function () {
                 Route::get('/index', [CategoryController::class, 'index'])->name('index');
-                Route::get('show/{id}', [CategoryController::class, 'show'])->name('show');
-                Route::put('category/{id}', [CategoryController::class, 'update'])->name('update');
+                Route::get('/list-category', [CategoryController::class, 'dataListCategory'])->name('dataListCategory');
+                Route::post('/store', [CategoryController::class, 'store'])->name('store');
+                Route::get('/{id}/edit', [CategoryController::class, 'edit'])->name('edit');
+                Route::put('/{id}', [CategoryController::class, 'update'])->name('update');
+                Route::get('/{id}/show', [CategoryController::class, 'show'])->name('show');
+                Route::delete('/{id}', [CategoryController::class, 'destroy'])->name('destroy');
+            }
+        );
+        Route::group(
+            [
+                'prefix' => 'cau-hoi',
+                'as' => 'questions.',
+                'namespace' => 'Questions',
+                'middleware' => ['checkAdmin'],
+            ],
+            function () {
+                Route::get('/index', [QuestionController::class, 'index'])->name('index');
+                Route::get('/list-question', [QuestionController::class, 'dataListQuestion'])->name('dataListQuestion');
+                Route::post('/store', [QuestionController::class, 'store'])->name('store');
+                Route::get('/{id}/edit', [QuestionController::class, 'edit'])->name('edit');
+                Route::put('/{id}', [QuestionController::class, 'update'])->name('update');
+                Route::get('/{id}/show', [QuestionController::class, 'show'])->name('show');
+                Route::delete('/{id}', [QuestionController::class, 'destroy'])->name('destroy');
+
+                // Answer
+                Route::group(
+                    [
+                        'prefix' => 'dap-an',
+                        'as' => 'answers.',
+                        'namespace' => 'Answers',
+                        'middleware' => ['checkAdmin'],
+                    ],
+                    function () {
+                        Route::get('/{id}', [AnswerController::class, 'getAnswers'])->name('index');
+                        Route::post('/{id}/toggle', [AnswerController::class, 'toggleIsCorrect'])->name('toggle');
+                        Route::post('/store', [AnswerController::class, 'store'])->name('store');
+                        Route::get('/{id}/edit', [AnswerController::class, 'edit'])->name('edit');
+                        Route::put('/{id}', [AnswerController::class, 'update'])->name('update');
+                        Route::delete('/{id}', [AnswerController::class, 'destroy'])->name('destroy');
+                    }
+                );
+
             }
         );
 
